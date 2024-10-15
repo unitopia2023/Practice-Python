@@ -1,3 +1,37 @@
+import pygame
+import time
+import random
+
+# Initialize pygame
+pygame.init()
+
+# Define colors
+white = (255, 255, 255)
+yellow = (255, 255, 102)
+black = (0, 0, 0)
+red = (213, 50, 80)
+green = (0, 255, 0)
+blue = (50, 153, 213)
+
+# Set up the display
+width = 600  # Width of the game window
+height = 400  # Height of the game window
+display = pygame.display.set_mode((width, height))
+pygame.display.set_caption('Snake Game')
+
+# Define snake characteristics
+snake_block = 10
+snake_speed = 15
+
+# Define the clock
+clock = pygame.time.Clock()
+
+# Function to draw the snake
+def our_snake(snake_block, snake_list):
+    for x in snake_list:
+        pygame.draw.rect(display, black, [x[0], x[1], snake_block, snake_block])
+
+# Main game function
 def gameLoop():
     game_over = False
     game_close = False
@@ -81,4 +115,5 @@ def gameLoop():
     pygame.quit()
     quit()
 
+# Start the game
 gameLoop()
