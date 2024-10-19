@@ -26,5 +26,6 @@ prompt('Enter [1] to add task, [2] to exit: \n')
 #     i = task_list.index(task) + 1
 #     print(i, task)
 
-for i, task in enumerate(task_list, start=1):
+# suggested by gpt:
+for i, task in enumerate(task_list, start=1): #enumerate(iterable, numbering start)
     print(i, task)
